@@ -1303,5 +1303,127 @@ Responsive style (always bottom in main style file)
       mask-mode: alpha;
     }
 
+  .img-service {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+  }
+
+  .products-container article.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  /* 2) Fijo tamaño de la imagen y anulo el img-fluid */
+  .products-container article.media img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 3) Ajusto el título y la descripción */
+  .products-container article.media .media-body {
+    padding: 0;
+  }
+  .products-container article.media h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+  .products-container article.media p {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  #menu {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: visible;
+  }
+
+
+  /* ——— Estilos uniformes para Recetas Rápidas Vajalt ——— */
+  
+/* Cada columna flex (d-flex align-items-stretch) estira igual la tarjeta */
+.recipes-row .col-lg-4.d-flex {
+  display: flex;
+}
+
+/* La tarjeta ocupa todo el alto de la columna */
+.recipes-row .recipe-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #111;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* El body de la tarjeta crece para llenar el espacio y organiza su contenido en columna */
+.recipes-row .recipe-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* Imagen circular centrada y de tamaño fijo */
+.recipes-row .recipe-card img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Título centrado y destacado */
+.recipes-row .recipe-card h4.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Línea del “Producto Vajalt:” */
+.recipes-row .recipe-card p > strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Subtítulos “Ingredientes” y “Preparación” alineados a la izquierda */
+.recipes-row .recipe-card h5 {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: #fff;
+}
+
+/* Listas legibles, alineadas a la izquierda y que ocupan el resto del espacio */
+.recipes-row .recipe-card ul,
+.recipes-row .recipe-card ol {
+  flex: 1;
+  text-align: left;
+  margin: 0 0 1rem 1.25rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Botón (si lo incluyes) siempre abajo y centrado */
+.recipes-row .recipe-card .btn {
+  margin-top: auto;
+  align-self: center;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}
+
     
     
